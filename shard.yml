@@ -1,0 +1,22 @@
+name: crkyll
+version: 0.1.0
+
+authors:
+  - Zhuang Biaowei <zbw@kaiyuanshe.org>
+
+description: |
+  Like jekyll, but write in crystall
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  markd:
+    github: icyleaf/markd
+  admiral:
+    github: jwaldrip/admiral.cr
+
+targets:
+  crkyll:
+    main: src/crkyll.cr
+
+license: Apache 2.0
