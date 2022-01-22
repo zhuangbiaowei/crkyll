@@ -1,4 +1,5 @@
 require "admiral"
+require "kemal"
 
 module Crkyll
     class Command < Admiral::Command
@@ -25,6 +26,8 @@ module Crkyll
       class Build < Admiral::Command
         def run
           puts "Build"
+          config = Crkyll::Site.init
+          puts config
         end
       end
     
@@ -54,7 +57,12 @@ module Crkyll
     
       class Server < Admiral::Command
         def run
-          puts "Server"
+          puts "Start Web Server"
+          get "/" do |env|
+            env.redirect "/index.html"
+          end
+          Kemal.config.public_folder = "./_site"
+          Kemal.run
         end
       end
     

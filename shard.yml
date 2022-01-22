@@ -9,11 +9,11 @@ description: |
 
 dependencies:
   kemal:
-    github: kemalcr/kemal
-  markd:
-    github: icyleaf/markd
+    github: kemalcr/kemal  
   admiral:
     github: jwaldrip/admiral.cr
+  cmark:
+    github: amauryt/cr-cmark-gfm
 
 targets:
   crkyll:

@@ -9,5 +9,8 @@ module Crkyll
     
         property :converters, :generators, :reader
         getter   :regenerator, :liquid_renderer, :includes_load_paths, :filter_cache, :profiler
+        def self.init
+            config = load_config("./_config.yml")
+        end
     end
 end
