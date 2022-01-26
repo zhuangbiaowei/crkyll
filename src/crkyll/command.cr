@@ -26,8 +26,14 @@ module Crkyll
       class Build < Admiral::Command
         def run
           puts "Build"
-          config = Crkyll::Site.init
-          puts config
+          site = Crkyll::Site.init
+          site.build
+          puts site.pages
+          puts site.posts
+          puts site.layouts
+          puts site.includes
+          puts site.data
+          puts site.sass
         end
       end
     
