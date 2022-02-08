@@ -28,12 +28,6 @@ module Crkyll
           puts "Build"
           site = Crkyll::Site.init
           site.build
-          puts site.pages
-          puts site.posts
-          puts site.layouts
-          puts site.includes
-          puts site.data
-          puts site.sass
         end
       end
     
